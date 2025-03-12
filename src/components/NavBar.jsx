@@ -13,10 +13,10 @@ function NavBar(){
                     <Link to="/productos">Productos</Link>
                 </div>
                 <div className="flex ">
-                    <Link to="/productos" >Clientes</Link>
+                    <Link to="/clientes" >Clientes</Link>
                 </div>
                 <div className="flex ">
-                    <Link to="/productos">Proveedores</Link>
+                    <Link to="/proveedores">Proveedores</Link>
                 </div>
             </div>
 
