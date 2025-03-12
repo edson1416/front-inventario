@@ -8,18 +8,22 @@ function NavBar(){
     return(
         <div className="flex flex-row justify-between w-full bg-gray-100 p-4 shadow-md">
             <div className="flex justify-center w-1/5">
-                <div className="flex items-center">
-                    <a href="/" className="text-xl font-semibold">INICIO</a>
+                <div className="flex items-center space-x-2">
+                    <i className="pi pi-home" style={{ fontSize: '1.5rem' }}></i>
+                    <a href="/" className="text-md font-semibold">INICIO</a>
                 </div>
             </div>
             <div className="flex w-4/5 justify-end space-x-6 text-lg">
-                <div className="hidden sm:flex">
+                <div className="hidden sm:flex items-center space-x-2">
+                    <i className="pi pi-box"></i>
                     <Link to="/productos">Productos</Link>
                 </div>
-                <div className="hidden sm:flex">
+                <div className="hidden sm:flex items-center space-x-2">
+                    <i className="pi pi-users"></i>
                     <Link to="/clientes" >Clientes</Link>
                 </div>
-                <div className="hidden sm:flex">
+                <div className="hidden sm:flex items-center space-x-2">
+                    <i className="pi pi-briefcase"></i>
                     <Link to="/proveedores">Proveedores</Link>
                 </div>
             </div>
