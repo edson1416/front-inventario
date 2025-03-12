@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar.jsx";
 import AppRoutes from "./routes/AppRoutes.jsx";
 import 'primereact/resources/themes/lara-light-blue/theme.css';  // Puedes cambiar el tema
 import 'primereact/resources/primereact.min.css';
-
+import 'primeicons/primeicons.css';
 
 
 

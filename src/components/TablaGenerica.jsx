@@ -29,7 +29,7 @@ const TablaGenerica = ({data, columns, formEditar, eliminar}) => {
 
     const toast = useRef(null);
     const showSuccess = () => {
-        toast.current.show({severity: 'success', summary: 'Success', detail: 'Save', life: 1500});
+        toast.current.show({severity: 'success', summary: 'Success', detail: 'Save'});
         setTimeout(() => {
             window.location.reload();
         }, 1500);
@@ -48,7 +48,7 @@ const TablaGenerica = ({data, columns, formEditar, eliminar}) => {
             {/*<Button label="Success" severity="success" onClick={showSuccess} />*/}
             <div className="flex flex-col w-3/5 space-y-4">
                 <div className="flex justify-end">
-                    <Button type="button" label="Nuevo producto" size="small" severity="secondary"
+                    <Button className="w-full md:w-auto lg:w-auto " type="button" label="Nuevo producto" size="small" severity="secondary"
                             onClick={() => abrirModalEditar()}/>
                 </div>
                 <DataTable className="w-full" value={data["content"]} paginator rows={5}
@@ -86,11 +86,11 @@ const TablaGenerica = ({data, columns, formEditar, eliminar}) => {
                 </DataTable>
 
             </div>
-            <Dialog header={nombreModal} visible={visible} style={{width: '40vw'}} onHide={() => setVisible(false)}>
+            <Dialog className="lg:w-2/5 md:w-2/4" header={nombreModal} visible={visible} onHide={() => setVisible(false)}>
                 {formEditar && React.cloneElement(formEditar, {data: datos, onCancelar: () => setVisible(false), showSuccess})}
             </Dialog>
 
-            <Dialog header="Eliminar producto" visible={visibleEliminar} style={{width: '30vw'}}
+            <Dialog header="Eliminar producto" visible={visibleEliminar}
                     onHide={() => setVisibleEliminar(false)}>
                 {eliminar && React.cloneElement(eliminar, {id: idRegistro ,cerrarModal: () => setVisibleEliminar(false), showInfo})}
             </Dialog>
