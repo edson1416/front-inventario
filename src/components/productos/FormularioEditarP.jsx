@@ -7,7 +7,7 @@ import {createProduct} from "../../services/productoService.js";
 const FormularioEditarP = ({data, onCancelar, showSuccess}) => {
 
     const [producto, setProducto] = React.useState({
-        idProducto: null,
+        id: null,
         descripcion: "",
         precio: "",
         existencia: "",
@@ -15,7 +15,7 @@ const FormularioEditarP = ({data, onCancelar, showSuccess}) => {
     React.useEffect(() => {
         if (data) {
             setProducto({
-                idProducto: data.idProducto,
+                id: data.id,
                 descripcion: data.descripcion,
                 precio: data.precio,
                 existencia: data.existencia,
@@ -52,8 +52,8 @@ const FormularioEditarP = ({data, onCancelar, showSuccess}) => {
               onSubmit={(e) => enviarFormulario(e)}>
             <div className="w-full flex flex-col">
                 <div className="flex flex-col space-y-2 p-4">
-                    <InputText id="idProducto"
-                               value={producto.idProducto || ""} hidden/>
+                    <InputText id="id"
+                               value={producto.id || ""} hidden/>
                     <label htmlFor="descripcion">Descripcion</label>
                     <InputText id="descripcion"
                                placeholder="Digite descripcion del producto"

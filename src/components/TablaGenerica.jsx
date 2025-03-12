@@ -29,7 +29,7 @@ const TablaGenerica = ({data, columns, formEditar, eliminar}) => {
 
     const toast = useRef(null);
     const showSuccess = () => {
-        toast.current.show({severity: 'success', summary: 'Success', detail: 'Registro insertardo', life: 1500});
+        toast.current.show({severity: 'success', summary: 'Success', detail: 'Save', life: 1500});
         setTimeout(() => {
             window.location.reload();
         }, 1500);
@@ -62,7 +62,7 @@ const TablaGenerica = ({data, columns, formEditar, eliminar}) => {
                         body={(rowData) => (
                             <div className="flex font-light">
                                 <div
-                                    className="bg-blue-100 flex justify-center p-1 m-2 rounded-lg w-2/5 shadow-sm cursor-pointer hover:bg-blue-200">
+                                    className="bg-blue-500 text-white flex justify-center p-1 m-2 rounded-lg w-2/5 shadow-sm cursor-pointer hover:bg-blue-300">
                                     <button
                                         type="button"
                                         onClick={() => abrirModalEditar(rowData)}
@@ -72,10 +72,10 @@ const TablaGenerica = ({data, columns, formEditar, eliminar}) => {
                                 </div>
 
                                 <div
-                                    className="bg-red-100 flex justify-center p-1 m-2 rounded-lg w-2/5 shadow-sm cursor-pointer hover:bg-red-200">
+                                    className="bg-red-500 text-white flex justify-center p-1 m-2 rounded-lg w-2/5 shadow-sm cursor-pointer hover:bg-red-300">
                                     <button
                                         type="button"
-                                        onClick={() => abrirEliminar(rowData.idProducto)}
+                                        onClick={() => abrirEliminar(rowData.id)}
                                         className="cursor-pointer"
                                     >Eliminar
                                     </button>

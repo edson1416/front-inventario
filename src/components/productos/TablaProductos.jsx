@@ -9,7 +9,7 @@ function TablaProductos() {
     const {data, loading, error} = useFetchData()
     const titulo = "Inventario de productos";
     const columns = [
-        {header: 'ID', field: 'idProducto'},
+        {header: 'ID', field: 'id'},
         {header: 'Descripcion', field: 'descripcion'},
         {header: 'Precio', field: 'precio'},
         {header: 'Existencia', field: 'existencia'},
