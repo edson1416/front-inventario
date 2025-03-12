@@ -20,7 +20,7 @@ function TablaProductos() {
     return (
         <>
             <TituloTablasGenerico titulo={titulo}></TituloTablasGenerico>
-            <TablaGenerica data={data.data} columns={columns} titulo={titulo} formEditar={<FormularioEditarP/>} eliminar={<EliminarP/>}></TablaGenerica>
+            <TablaGenerica data={data.data} columns={columns} formEditar={<FormularioEditarP/>} eliminar={<EliminarP/>}></TablaGenerica>
         </>
 
     )

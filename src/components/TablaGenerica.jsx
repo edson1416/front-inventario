@@ -87,12 +87,12 @@ const TablaGenerica = ({data, columns, formEditar, eliminar}) => {
 
             </div>
             <Dialog header={nombreModal} visible={visible} style={{width: '40vw'}} onHide={() => setVisible(false)}>
-                {React.cloneElement(formEditar, {data: datos, onCancelar: () => setVisible(false), showSuccess})}
+                {formEditar && React.cloneElement(formEditar, {data: datos, onCancelar: () => setVisible(false), showSuccess})}
             </Dialog>
 
             <Dialog header="Eliminar producto" visible={visibleEliminar} style={{width: '30vw'}}
                     onHide={() => setVisibleEliminar(false)}>
-                {React.cloneElement(eliminar, {id: idRegistro ,cerrarModal: () => setVisibleEliminar(false), showInfo})}
+                {eliminar && React.cloneElement(eliminar, {id: idRegistro ,cerrarModal: () => setVisibleEliminar(false), showInfo})}
             </Dialog>
 
         </div>
