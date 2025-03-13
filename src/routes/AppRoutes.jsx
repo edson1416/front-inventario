@@ -3,6 +3,7 @@ import TablaProductos from "../components/productos/TablaProductos.jsx";
 import TablaClientes from "../components/clientes/TablaClientes.jsx";
 import Inicio from "../components/Inicio.jsx";
 import TablaProveedores from "../components/proveedores/TablaProveedores.jsx";
+import FormPedido from "../components/pedidos/FormPedido.jsx";
 
 const AppRoutes = () => {
     return (
@@ -11,6 +12,7 @@ const AppRoutes = () => {
             <Route path="/productos" element={<TablaProductos/>}></Route>
             <Route path="/clientes" element={<TablaClientes/>}></Route>
             <Route path="/proveedores" element={<TablaProveedores/>}></Route>
+            <Route path="/pedidos" element={<FormPedido/>}></Route>
         </Routes>
     )
 }

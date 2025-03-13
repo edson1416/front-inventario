@@ -16,7 +16,7 @@ function TablaProductos() {
     ]
     if (loading) return <p>Cargando datos ...</p>
     if (error) return <p>{error.message}</p>;
-    console.log(data.data);
+    //console.log(data.data[0].categorias[0].nombre);
     return (
         <>
             <TituloTablasGenerico titulo={titulo}></TituloTablasGenerico>

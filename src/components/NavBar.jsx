@@ -26,6 +26,10 @@ function NavBar(){
                     <i className="pi pi-briefcase"></i>
                     <Link to="/proveedores">Proveedores</Link>
                 </div>
+                <div className="hidden sm:flex items-center space-x-2">
+                    <i className="pi pi-shopping-bag"></i>
+                    <Link to="/pedidos">Pedidos</Link>
+                </div>
             </div>
 
             <div className="sm:hidden">

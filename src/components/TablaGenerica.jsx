@@ -48,10 +48,10 @@ const TablaGenerica = ({data, columns, formEditar, eliminar}) => {
             {/*<Button label="Success" severity="success" onClick={showSuccess} />*/}
             <div className="flex flex-col w-3/5 space-y-4">
                 <div className="flex justify-end">
-                    <Button className="w-full md:w-auto lg:w-auto " type="button" label="Nuevo producto" size="small" severity="secondary"
+                    <Button className="w-full md:w-auto lg:w-auto " type="button" label="Nuevo registro" size="small" severity="secondary"
                             onClick={() => abrirModalEditar()}/>
                 </div>
-                <DataTable className="w-full" value={data["content"]} paginator rows={5}
+                <DataTable className="w-full" value={data} paginator rows={5}
                            rowsPerPageOptions={[5, 10, 25, 50]}
                            tableStyle={{minWidth: '50rem'}}>
                     {columns.map((column, index) => (
